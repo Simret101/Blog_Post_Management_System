@@ -1,0 +1,21 @@
+{
+	"info": {
+		"_postman_id": "e4dc352c-05c5-4dc1-a973-2cbe575d06f9",
+		"name": "Blog_post_management_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"id": "2ed89e1e-4b5f-4eb4-ba07-803bf1aa35ff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
