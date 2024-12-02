@@ -6,6 +6,34 @@
 	},
 	"item": [
 		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "01a96fc9-c46a-45c2-b8ae-c578a7dfd9e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
+		},
+		{
+			"name": "User Management",
+			"item": [],
+			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
+		},
+		{
+			"name": "Blog Management",
+			"item": [],
+			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136"
+		},
+		{
 			"name": "New Request",
 			"id": "04ba0e86-7c34-4742-a2d0-b777e8336d38",
 			"protocolProfileBehavior": {
