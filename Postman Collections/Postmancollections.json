@@ -201,8 +201,80 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Search And Filter",
 					"id": "e7f30d8c-e2d1-4177-94ed-0f1b09f4a623",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Popularity Sort",
+					"id": "8ad44d19-263b-46e6-835d-75d065b61ed4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Comments",
+					"id": "21307325-c207-49ed-b6c0-feb8a80dc866",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"id": "bc789552-7283-4523-bd6b-f345ab75103b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"id": "2bd2a60b-52ef-4799-b13b-c179088b1204",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blog",
+					"id": "c310da22-4c36-40aa-bce5-bf3332eaa957",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Comment",
+					"id": "54ea792a-85bc-4a2b-a095-3aae753ec496",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
