@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "791257bd-a5d6-4a94-95ed-838f0cccde15",
+		"name": "Blog_post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signup",
+					"id": "01a96fc9-c46a-45c2-b8ae-c578a7dfd9e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"id": "06f0f47e-9bff-4216-bc35-d0812b8a4fba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"id": "fd1a759b-5461-41b8-a30c-dc4d9f3856b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"id": "1cc39612-d0cb-4768-881c-c628a0ade411",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Get all users",
+					"id": "f88aaa35-a69f-4354-932c-434a9b09da95",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get one user",
+					"id": "e7a7bcee-d0b7-4b12-8765-2039c74cc31c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "d572d9a7-2d94-4565-8a42-ea3eaad6fe36",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"id": "a3749450-bae1-49c2-8abd-cd74ea6339ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Promote User",
+					"id": "5493caf2-75b8-4228-8c9e-c81524024a28",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Demote User",
+					"id": "ee0fd2c5-b786-41ef-9c4c-85854d9f96c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "upload-profile-picture",
+					"id": "76bba3cf-f889-4dfe-8156-f3000cfa2b80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "09b49413-21a3-435e-808b-bd6513addd70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
+		},
+		{
+			"name": "Blog Management",
+			"item": [
+				{
+					"name": "Get All Blogs with query parameter",
+					"id": "a02f2052-3e11-4f9d-a23b-1d8135279861",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Blog",
+					"id": "04ba0e86-7c34-4742-a2d0-b777e8336d38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Blog",
+					"id": "35940e92-2ce8-461c-99b3-f8f31720ca49",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Search And Filter",
+					"id": "e7f30d8c-e2d1-4177-94ed-0f1b09f4a623",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Popularity Sort",
+					"id": "8ad44d19-263b-46e6-835d-75d065b61ed4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Comments",
+					"id": "21307325-c207-49ed-b6c0-feb8a80dc866",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"id": "bc789552-7283-4523-bd6b-f345ab75103b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"id": "2bd2a60b-52ef-4799-b13b-c179088b1204",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blog",
+					"id": "c310da22-4c36-40aa-bce5-bf3332eaa957",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Comment",
+					"id": "54ea792a-85bc-4a2b-a095-3aae753ec496",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136"
+		}
+	]
+}
