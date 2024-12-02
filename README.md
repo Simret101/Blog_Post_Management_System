@@ -12,4 +12,7 @@ This project introduces microservices architecture through a Blog Post Managemen
 ## Technologies Used  
 - **Programming Language**: Go  
 - **Framework**: Gin  
-- **Database**: PostgreSQL  
+- **Database**: PostgreSQL
+## API Design Documentation
+Here is our API design documentation in YAML format:
+[https://www.postman.com/blogposts/api-fest-nutrition/api/b3821248-5ee4-4a1b-aa5a-7ea179465db6/blog-post-management-api?action=share&creator=40134617]
