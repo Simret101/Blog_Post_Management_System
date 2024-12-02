@@ -135,8 +135,74 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "upload-profile-picture",
 					"id": "76bba3cf-f889-4dfe-8156-f3000cfa2b80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "09b49413-21a3-435e-808b-bd6513addd70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
+		},
+		{
+			"name": "Blog Management",
+			"item": [
+				{
+					"name": "Get All Blogs with query parameter",
+					"id": "a02f2052-3e11-4f9d-a23b-1d8135279861",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Blog",
+					"id": "04ba0e86-7c34-4742-a2d0-b777e8336d38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Blog",
+					"id": "35940e92-2ce8-461c-99b3-f8f31720ca49",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "e7f30d8c-e2d1-4177-94ed-0f1b09f4a623",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -147,24 +213,7 @@
 					"response": []
 				}
 			],
-			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
-		},
-		{
-			"name": "Blog Management",
-			"item": [],
 			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136"
-		},
-		{
-			"name": "New Request",
-			"id": "04ba0e86-7c34-4742-a2d0-b777e8336d38",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
 		}
 	]
 }
