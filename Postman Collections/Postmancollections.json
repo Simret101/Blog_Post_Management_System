@@ -45,8 +45,98 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Refresh Token",
 					"id": "1cc39612-d0cb-4768-881c-c628a0ade411",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Get all users",
+					"id": "f88aaa35-a69f-4354-932c-434a9b09da95",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get one user",
+					"id": "e7a7bcee-d0b7-4b12-8765-2039c74cc31c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "d572d9a7-2d94-4565-8a42-ea3eaad6fe36",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"id": "a3749450-bae1-49c2-8abd-cd74ea6339ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Promote User",
+					"id": "5493caf2-75b8-4228-8c9e-c81524024a28",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Demote User",
+					"id": "ee0fd2c5-b786-41ef-9c4c-85854d9f96c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "76bba3cf-f889-4dfe-8156-f3000cfa2b80",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -57,11 +147,6 @@
 					"response": []
 				}
 			],
-			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
-		},
-		{
-			"name": "User Management",
-			"item": [],
 			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
 		},
 		{
