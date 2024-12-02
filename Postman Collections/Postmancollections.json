@@ -9,8 +9,44 @@
 			"name": "Authentication",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Signup",
 					"id": "01a96fc9-c46a-45c2-b8ae-c578a7dfd9e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email",
+					"id": "06f0f47e-9bff-4216-bc35-d0812b8a4fba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"id": "fd1a759b-5461-41b8-a30c-dc4d9f3856b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "1cc39612-d0cb-4768-881c-c628a0ade411",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
