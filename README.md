@@ -9,25 +9,31 @@ Blog_Post_Management_System/
 
 ## Folder Structure
 
+# Blog Post Project
 
-├── blog_service           
-│   ├── controllers         
-│   ├── models              
-│   ├── repositories        
-│   └── services            
-│
-├── user_service            
-│   ├── controllers         
-│   ├── models              
-│   ├── repositories        
-│   └── services            
-│
-└── auth_service            
-    ├── controllers         
-    ├── models              
-    ├── repositories        
-    └── services
+This repository is organized into three main services: Blog Service, User Service, and Auth Service. Below is the folder structure for the project:
 
+## Folder Structure
+
+```plaintext
+blog_post/
+├── blog_service/
+│   ├── controllers/       
+│   ├── models/            
+│   ├── repositories/     
+│   └── services/          
+│
+├── user_service/
+│   ├── controllers/       
+│   ├── models/            
+│   ├── repositories/      
+│   └── services/          
+│
+└── auth_service/
+    ├── controllers/       
+    ├── models/            
+    ├── repositories/      
+    └── services/          
             
 ## Features
 - Blog Management: Create, read, update, and delete blog posts.
