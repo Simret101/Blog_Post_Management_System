@@ -10,23 +10,24 @@ Blog_Post_Management_System/
 ## Folder Structure
 
 
-├── blog_service           
-│   ├── controllers         
-│   ├── models              
-│   ├── repositories        
-│   └── services            
-│
-├── user_service            
-│   ├── controllers         
-│   ├── models              
-│   ├── repositories        
-│   └── services            
-│
-└── auth_service            
-    ├── controllers         
-    ├── models              
-    ├── repositories        
-    └── services            
+Blog_Post/
+├─ blog_service/
+│  ├─ controllers/
+│  ├─  models/
+│  ├─ repositories/
+│  ├─ services/
+├─ user_service/
+│  ├─ controllers/
+│  ├─ models/
+│  ├─ repositories/
+│  ├─ services/
+├─ auth_service/
+│  ├─ controllers/
+│  ├─ models/
+│  ├─ repositories/
+│  ├─ services/
+
+            
 ## Features
 - Blog Management: Create, read, update, and delete blog posts.
 - User Management: Handle user registration, profile updates, and role-based access control.
