@@ -115,8 +115,7 @@ auth_service/
 
 ---
 
-## API Documentation
-Detailed API documentation can be found [here](https://www.postman.com/blogposts/api-fest-nutrition/api/b3821248-5ee4-4a1b-aa5a-7ea179465db6/blog-post-management-api?action=share&creator=40134617).
+ 
 
 ---
 
@@ -134,6 +133,8 @@ Detailed API documentation can be found [here](https://www.postman.com/blogposts
 5. Create a pull request.
 
 ---
+API Documentation
+Detailed API documentation can be found [here](https://www.postman.com/blogposts/api-fest-nutrition/api/b3821248-5ee4-4a1b-aa5a-7ea179465db6/blog-post-management-api?action=share&creator=40134617).
 
 ## License
 This project is licensed under the MIT License.
