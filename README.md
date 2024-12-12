@@ -10,22 +10,23 @@ Blog_Post_Management_System/
 ## Folder Structure
 
 
-Blog_Post/
-├─ blog_service/
-│  ├─ controllers/
-│  ├─  models/
-│  ├─ repositories/
-│  ├─ services/
-├─ user_service/
-│  ├─ controllers/
-│  ├─ models/
-│  ├─ repositories/
-│  ├─ services/
-├─ auth_service/
-│  ├─ controllers/
-│  ├─ models/
-│  ├─ repositories/
-│  ├─ services/
+├── blog_service           
+│   ├── controllers         
+│   ├── models              
+│   ├── repositories        
+│   └── services            
+│
+├── user_service            
+│   ├── controllers         
+│   ├── models              
+│   ├── repositories        
+│   └── services            
+│
+└── auth_service            
+    ├── controllers         
+    ├── models              
+    ├── repositories        
+    └── services
 
             
 ## Features
