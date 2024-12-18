@@ -10,8 +10,7 @@ The Blog Post Management System is a microservices-based application that enable
 
 ## Architecture  
 Below is the microservice architecture for the system:
-
-(https://github.com/Simret101/Blog_Post_Management_System/blob/main/assets/microservice_architecture%20(1).pdf)
+![Microservice Architecture](https://github.com/Simret101/Blog_Post_Management_System/blob/main/assets/microservice_architecture%20(1)-1.jpg)
 
 ---
 
