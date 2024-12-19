@@ -109,3 +109,11 @@ Detailed API documentation can be found [here](https://www.postman.com/blogposts
 
 ---
 
+
+Table with the APIs included:
+
+| Service        | Port | Purpose                                                                                   | Key Features                                                                                   | Database Entities                         | APIs                                                                                           |
+|---------------------|----------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Blog Service    | 8081     | Manages blog-related features, including posts, comments, tags, and categories.              | - CRUD operations for blog posts.<br>- Post categorization.<br>- Advanced search and filtering.    | Posts, Comments, Tags, Categories    | - POST /blogs: Create a blog.<br>- GET /blogs/id: Retrieve a blog.<br>- PUT /blogs/id: Update a blog.<br>- DELETE /blogs/id: Delete a blog. |
+| User Service    | 8082     | Manages user-related operations, such as login, registration, profile updates, and roles.    | - CRUD operations for users.<br>- Role-based access control.<br>- Account recovery and password reset. | Users, Roles, Profiles                 | - POST /users: Create user.<br>- GET /users/id: Retrieve user.<br>- PUT /users/id: Update user.<br>- DELETE /users/id: Delete user. |
+| Auth Service    | 8082     | Handles authentication and authorization, including token management and validation.         | - JWT-based token management.<br>- OAuth2 integration.<br>- Role-based access control.             | Tokens, Permissions                      | - POST /auth/login: Log in.<br>- POST /auth/logout: Log out.<br>- POST /auth/token: Refresh token. |
