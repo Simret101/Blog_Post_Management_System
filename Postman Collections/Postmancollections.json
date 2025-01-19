@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Authentication",
+			"name": "Auth service",
 			"item": [
 				{
 					"name": "Signup",
@@ -60,7 +60,7 @@
 			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
 		},
 		{
-			"name": "User Management",
+			"name": "User service",
 			"item": [
 				{
 					"name": "Get all users",
@@ -162,7 +162,7 @@
 			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
 		},
 		{
-			"name": "Blog Management",
+			"name": "Blog service",
 			"item": [
 				{
 					"name": "Get All Blogs with query parameter",
@@ -203,18 +203,6 @@
 				{
 					"name": "Search And Filter",
 					"id": "e7f30d8c-e2d1-4177-94ed-0f1b09f4a623",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "Popularity Sort",
-					"id": "8ad44d19-263b-46e6-835d-75d065b61ed4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -268,18 +256,6 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "Comment",
-					"id": "54ea792a-85bc-4a2b-a095-3aae753ec496",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
 						"header": []
 					},
 					"response": []
