@@ -31,7 +31,7 @@
 					"response": []
 				},
 				{
-					"name": "Verify Email",
+					"name": "Verify Email By ID",
 					"id": "06f0f47e-9bff-4216-bc35-d0812b8a4fba",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
