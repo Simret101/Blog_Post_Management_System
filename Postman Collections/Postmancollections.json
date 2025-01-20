@@ -75,6 +75,28 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "Login",
+					"id": "9580bf2c-8f33-4b64-95cc-31c7acd12392",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \r\n   \"email\" : \"semretb74@gmail.com\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/login"
+					},
+					"response": []
 				}
 			],
 			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
