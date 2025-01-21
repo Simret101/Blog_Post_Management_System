@@ -265,7 +265,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NjAxODAsIklEIjoiNjc4ZmJlYjMwNjE5ZmNkZjFlMWM1NDNiIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIlJvbGUiOiJhZG1pbiJ9.dx8bUUmmkM63vGzwysSO6SwZ87hqSJkB1GWly1E27-0"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "PUT",
@@ -293,7 +293,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NjAxODAsIklEIjoiNjc4ZmJlYjMwNjE5ZmNkZjFlMWM1NDNiIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIlJvbGUiOiJhZG1pbiJ9.dx8bUUmmkM63vGzwysSO6SwZ87hqSJkB1GWly1E27-0"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "PUT",
