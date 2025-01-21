@@ -175,8 +175,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+							}
+						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"url": "http://127.0.0.1:8080/api/user/"
 					},
 					"response": []
