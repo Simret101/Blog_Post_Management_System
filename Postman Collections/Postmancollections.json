@@ -126,6 +126,18 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "Google",
+					"id": "a69887bf-bf3f-4c88-b1b3-871198981e01",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
