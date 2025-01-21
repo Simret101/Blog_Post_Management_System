@@ -240,7 +240,30 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/allblog/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"allblog",
+								""
+							],
+							"query": [
+								{
+									"key": "tag",
+									"value": "old",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -331,7 +354,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": ""
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"nice\",\r\n    \"content\" : \"content\",\r\n    \"tag\" : [\"old\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/api/blog/"
 					},
 					"response": []
 				}
