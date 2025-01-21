@@ -292,19 +292,6 @@
 						"url": ""
 					},
 					"response": []
-				},
-				{
-					"name": "Delete User",
-					"id": "09b49413-21a3-435e-808b-bd6513addd70",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": ""
-					},
-					"response": []
 				}
 			],
 			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
@@ -355,6 +342,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "http://127.0.0.1:8080/api/blog/67572c41dbe8d1abdcdac9dc"
