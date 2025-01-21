@@ -89,7 +89,7 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": ""
+						"url": "http://127.0.0.1:8080/refresh"
 					},
 					"response": []
 				},
@@ -141,14 +141,24 @@
 					"response": []
 				},
 				{
-					"name": "Refresh",
-					"id": "cba452e4-76bf-43ae-b387-ddd74daef165",
+					"name": "Logout",
+					"id": "ae64df6b-c887-4c4d-932d-ef768415ec82",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \r\n   \"email\" : \"semretb74@gmail.com\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/logout"
 					},
 					"response": []
 				}
