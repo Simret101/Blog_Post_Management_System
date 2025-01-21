@@ -262,9 +262,24 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NjAxODAsIklEIjoiNjc4ZmJlYjMwNjE5ZmNkZjFlMWM1NDNiIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIlJvbGUiOiJhZG1pbiJ9.dx8bUUmmkM63vGzwysSO6SwZ87hqSJkB1GWly1E27-0"
+							}
+						},
 						"method": "PUT",
 						"header": [],
-						"url": ""
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"678fbeb30619fcdf1e1c543b\",\r\n \r\n    \"role\":\"admin\"\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/api/promote/678fbeb30619fcdf1e1c543b"
 					},
 					"response": []
 				},
