@@ -366,6 +366,19 @@
 						"url": "http://127.0.0.1:8080/api/blog/"
 					},
 					"response": []
+				},
+				{
+					"name": "UniqueBlog",
+					"id": "b2ef700a-b091-4083-afb5-219553587195",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8080/api/UniqueBlog"
+					},
+					"response": []
 				}
 			],
 			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136"
