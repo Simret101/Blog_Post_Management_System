@@ -276,7 +276,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": "http://127.0.0.1:8080/api/blog/67572c41dbe8d1abdcdac9dc"
 					},
 					"response": []
 				},
