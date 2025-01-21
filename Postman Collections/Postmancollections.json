@@ -114,6 +114,18 @@
 						"url": "http://127.0.0.1:8080/login"
 					},
 					"response": []
+				},
+				{
+					"name": "Oauth2",
+					"id": "e4b800dc-6751-4512-8e11-4de7d61c7e90",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
