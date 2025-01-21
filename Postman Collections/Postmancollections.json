@@ -135,6 +135,19 @@
 					},
 					"request": {
 						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8080/google"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"id": "cba452e4-76bf-43ae-b387-ddd74daef165",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
 						"header": []
 					},
 					"response": []
