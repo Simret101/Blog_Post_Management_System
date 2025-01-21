@@ -130,7 +130,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": "http://127.0.0.1:8080/api/user/"
 					},
 					"response": []
 				},
@@ -143,7 +143,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": "http://127.0.0.1:8080/api/user/678ea730657baab46eae99f1"
 					},
 					"response": []
 				},
@@ -169,7 +169,16 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": ""
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Username\",\r\n    \"bio\": \"This is my updated bio\",\r\n    \"is_verified\": true\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/api/user/678ea730657baab46eae99f1"
 					},
 					"response": []
 				},
