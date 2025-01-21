@@ -123,7 +123,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -178,14 +179,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "GET",
 						"header": [
 							{
 								"key": "token",
-								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE",
+								"value": "bearer {{vault:json-web-token}}",
 								"type": "text",
 								"disabled": true
 							}
@@ -204,7 +205,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "GET",
@@ -223,7 +224,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "DELETE",
@@ -345,7 +346,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc1NTE0NjIsIklEIjoiNjc4ZjljMWJhMjhmNGFhODZmODgyNDdmIiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIklzQWRtaW4iOmZhbHNlfQ.5A-Ni5K7b6cl1N8FHiLMloQ2q9NjCUJ77IR3l4Z93SE"
+								"token": "{{vault:authorization-secret}}"
 							}
 						},
 						"method": "GET",
