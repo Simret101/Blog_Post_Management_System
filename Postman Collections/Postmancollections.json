@@ -149,18 +149,6 @@
 						"url": "http://127.0.0.1:8080/captcha/"
 					},
 					"response": []
-				},
-				{
-					"name": "recaptcha",
-					"id": "5d453ac7-7c03-4a0b-af8c-696c2d924283",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
