@@ -409,19 +409,6 @@
 					"response": []
 				},
 				{
-					"name": "Get My Blog",
-					"id": "35940e92-2ce8-461c-99b3-f8f31720ca49",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": ""
-					},
-					"response": []
-				},
-				{
 					"name": "Search And Filter",
 					"id": "e7f30d8c-e2d1-4177-94ed-0f1b09f4a623",
 					"protocolProfileBehavior": {
@@ -492,19 +479,6 @@
 							}
 						},
 						"url": "http://127.0.0.1:8080/api/blog/"
-					},
-					"response": []
-				},
-				{
-					"name": "UniqueBlog",
-					"id": "b2ef700a-b091-4083-afb5-219553587195",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "http://127.0.0.1:8080/api/UniqueBlog"
 					},
 					"response": []
 				}
