@@ -328,9 +328,25 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzc2Mjk5NTUsIklEIjoiNjc5MGNmNTBhYThhOTY0MmNjMzI5MTA1IiwiQXZhdGFyIjp7Il9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInBhdGgiOiIiLCJVcGxhb2RlZF9kYXRlIjoiMDAwMS0wMS0wMVQwMDowMDowMFoifSwiTmFtZSI6InNpbXJldCIsIkVtYWlsIjoic2VtcmV0Yjc0QGdtYWlsLmNvbSIsIlJvbGUiOiJjcmVhdG9yIn0.kF3Fv4q6HxBTsvOYHzlkC-fsvMqQURlvxLY3TkT3RDA"
+							}
+						},
 						"method": "POST",
 						"header": [],
-						"url": ""
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1efd8b24-6d83-4ed0-a8dd-6d8437887b50"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8080/api/upload/6790cf50aa8a9642cc329105"
 					},
 					"response": []
 				}
