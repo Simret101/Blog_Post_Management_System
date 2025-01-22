@@ -116,32 +116,6 @@
 					"response": []
 				},
 				{
-					"name": "Oauth2",
-					"id": "e4b800dc-6751-4512-8e11-4de7d61c7e90",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Google",
-					"id": "a69887bf-bf3f-4c88-b1b3-871198981e01",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "http://127.0.0.1:8080/google"
-					},
-					"response": []
-				},
-				{
 					"name": "Logout",
 					"id": "ae64df6b-c887-4c4d-932d-ef768415ec82",
 					"protocolProfileBehavior": {
