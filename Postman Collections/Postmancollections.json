@@ -151,7 +151,8 @@
 					"response": []
 				}
 			],
-			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb"
+			"id": "212fb7b5-46d4-4d4d-bde8-c253326428fb",
+			"description": "Authenticate all users"
 		},
 		{
 			"name": "User service",
@@ -351,7 +352,8 @@
 					"response": []
 				}
 			],
-			"id": "0c138216-9a78-4d1a-a066-22394cd04362"
+			"id": "0c138216-9a78-4d1a-a066-22394cd04362",
+			"description": "All Users CRUD operations."
 		},
 		{
 			"name": "Blog service",
@@ -486,7 +488,8 @@
 					"response": []
 				}
 			],
-			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136"
+			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136",
+			"description": "All Blog CRUD operation."
 		}
 	]
 }
