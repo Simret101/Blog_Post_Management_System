@@ -492,8 +492,22 @@
 			"description": "All Blog CRUD operation."
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Api_Gateway",
+			"item": [
+				{
+					"name": "services",
+					"id": "534163c5-2ff0-4bbc-9fc0-ec40402e0537",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/services"
+					},
+					"response": []
+				}
+			],
 			"id": "96268d49-0ada-4769-895f-718fae711294"
 		}
 	]
