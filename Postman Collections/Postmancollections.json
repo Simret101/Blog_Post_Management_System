@@ -490,6 +490,11 @@
 			],
 			"id": "a1792dae-23f5-4faf-bfa3-e2b85f234136",
 			"description": "All Blog CRUD operation."
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "96268d49-0ada-4769-895f-718fae711294"
 		}
 	]
 }
