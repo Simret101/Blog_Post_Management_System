@@ -7,6 +7,10 @@
 The Blog Post Management System is a microservices-based application that enables users to create, read, update, and delete blog posts. It includes user management and authentication features, making it secure and scalable. This project is built with Go, PostgreSQL, and the Gin framework.  
 
 ---
+## Blog Post Microservice 📝  
+
+For a detailed explanation, check out the [Blog Post Microservice](https://medium.com/@semretb74/building-a-scalable-blog-management-system-with-microservices-architecture-4552763f9620).  
+
 
 ## Architecture  
 Below is the microservice architecture for the system:
