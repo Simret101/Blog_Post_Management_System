@@ -14,7 +14,7 @@ For a detailed explanation, check out the [Blog Post Microservice](https://mediu
 
 ## Architecture  
 Below is the microservice architecture for the system:
-![Microservice Architecture](https://github.com/Simret101/Blog_Post_Management_System/blob/main/assets/microservice_architecture (2).pdf)]
+![Microservice Architecture](https://github.com/Simret101/Blog_Post_Management_System/blob/main/assets/microservice_architecture%20(3).jpg)]
 
 ---
 
