@@ -1,6 +1,0 @@
-# github.com/go-zookeeper/zk v1.0.4
-## explicit; go 1.13
-github.com/go-zookeeper/zk
-# github.com/gorilla/mux v1.8.1
-## explicit; go 1.20
-github.com/gorilla/mux
