@@ -23,24 +23,48 @@ Below is the microservice architecture for the system:
 This repository is organized into three main services: Blog Service, User Service, and Auth Service. Below is the folder structure for the project:  
 
 ```plaintext
-blog_post/
-├── blog_service/
-│   ├── controllers/        
-│   ├── models/             
-│   ├── repositories/       
-│   └── services/           
+blog_post_management_system/
+├── api-gateway/
+├── authservice/
+│   ├── captha/
+│   ├── config/
+│   ├── controller/
+│   ├── crypto/
+│   ├── database/
+│   ├── domain/
+│   ├── emailservices/
+│   ├── go-service-discovery/
+│   ├── httputil/
+│   ├── middleware/
+│   ├── passwordservice/
+│   ├── recaptcha/
+│   ├── repository/
+│   ├── route/
+│   ├── token_service/
+│   ├── usecase/
+│   ├── util/
 │
-├── user_service/
-│   ├── controllers/        
-│   ├── models/             
-│   ├── repositories/       
-│   └── services/           
+blogservice/
+│   ├── config/
+│   ├── consumer/
+│   ├── controller/
+│   ├── database/
+│   ├── domain/
+│   ├── go-service-discovery/
+│   ├── repository/
+│   ├── route/
+│   └── usecase/
 │
-└── auth_service/
-    ├── controllers/            
-    ├── models/                 
-    ├── repositories/           
-    └── services/
+userservice/
+│   ├── config/
+│   ├── controller/
+│   ├── database/
+│   ├── domain/
+│   ├── go-service-discovery/
+│   ├── producer/
+│   ├── repository/
+│   ├── route/
+│   └── usecase/
 ```  
 
 ---
