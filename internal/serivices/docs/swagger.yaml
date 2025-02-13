@@ -1,0 +1,1003 @@
+definitions:
+  domain.Blog:
+    properties:
+      _id:
+        type: string
+      comment_count:
+        type: integer
+      content:
+        type: string
+      created_at:
+        type: string
+      dislike_count:
+        type: integer
+      like_count:
+        type: integer
+      owner: {}
+      tag:
+        items:
+          type: string
+        type: array
+      title:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  domain.Bookmark:
+    properties:
+      blog_id:
+        type: string
+      id:
+        type: string
+      user_id:
+        type: string
+    type: object
+  domain.LogINUser:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  domain.PostBlog:
+    properties:
+      content:
+        type: string
+      owner:
+        $ref: '#/definitions/practice_blogservice_domain.ResponseUser'
+      tag:
+        items:
+          type: string
+        type: array
+      title:
+        type: string
+    type: object
+  domain.RegisterUser:
+    properties:
+      bio:
+        type: string
+      email:
+        type: string
+      is_admin:
+        type: boolean
+      password:
+        minLength: 8
+        type: string
+      username:
+        maxLength: 30
+        minLength: 3
+        type: string
+    required:
+    - email
+    - password
+    - username
+    type: object
+  domain.User:
+    properties:
+      _id:
+        type: string
+      bio:
+        type: string
+      email:
+        type: string
+      is_admin:
+        type: boolean
+      is_verified:
+        type: boolean
+      oauth_id:
+        type: string
+      oauth_provider:
+        type: string
+      password:
+        type: string
+      profile_picture:
+        $ref: '#/definitions/practice_userservice_domain.Media'
+      username:
+        type: string
+    type: object
+  domain.VerifyEmail:
+    properties:
+      email:
+        type: string
+    type: object
+  httputil.HTTPError:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        example: Invalid request
+        type: string
+    type: object
+  practice_blogservice_domain.ResponseUser:
+    properties:
+      _id:
+        type: string
+      bio:
+        type: string
+      email:
+        type: string
+      is_admin:
+        type: boolean
+      profile_picture:
+        $ref: '#/definitions/practice_userservice_domain.Media'
+      username:
+        type: string
+    type: object
+  practice_userservice_domain.Media:
+    properties:
+      _id:
+        type: string
+      path:
+        type: string
+      uplaoded_date:
+        type: string
+    type: object
+  practice_userservice_domain.ResponseUser:
+    properties:
+      _id:
+        type: string
+      bio:
+        type: string
+      email:
+        type: string
+      is_admin:
+        type: boolean
+      profile_picture:
+        $ref: '#/definitions/practice_userservice_domain.Media'
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is a simple blog post API
+  termsOfService: http://swagger.io/terms/
+  title: Blog Post API
+  version: "1.0"
+paths:
+  /add/{userID}/{blogID}:
+    post:
+      consumes:
+      - application/json
+      description: Add a bookmark for a user
+      parameters:
+      - description: User ID
+        in: path
+        name: userID
+        required: true
+        type: string
+      - description: Blog ID
+        in: path
+        name: blogID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Bookmark added successfully
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Add a bookmark
+      tags:
+      - Bookmarks
+  /api/UniqueBlog:
+    get:
+      consumes:
+      - application/json
+      description: Get unique blog posts based on cookies
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Blog'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get unique blog posts based on cookies
+      tags:
+      - Blogs
+  /api/allblog:
+    get:
+      consumes:
+      - application/json
+      description: Get all blogs with pagination
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        type: integer
+      - description: Limit
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Blog'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get all blogs with pagination
+      tags:
+      - Blogs
+  /api/blog:
+    post:
+      consumes:
+      - application/json
+      description: Create a new blog post
+      parameters:
+      - description: Blog Post
+        in: body
+        name: blog
+        required: true
+        schema:
+          $ref: '#/definitions/domain.PostBlog'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Blog'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Create a new blog post
+      tags:
+      - Blogs
+  /api/blog/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a blog post by ID
+      parameters:
+      - description: Blog ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Blog post deleted successfully!
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Delete a blog post by ID
+      tags:
+      - Blogs
+    get:
+      consumes:
+      - application/json
+      description: Get a single blog post by ID
+      parameters:
+      - description: Blog ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Blog'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get a single blog post by ID
+      tags:
+      - Blogs
+    put:
+      consumes:
+      - application/json
+      description: Update a blog post by ID
+      parameters:
+      - description: Blog ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Blog Post
+        in: body
+        name: blog
+        required: true
+        schema:
+          $ref: '#/definitions/domain.Blog'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Blog'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Update a blog post by ID
+      tags:
+      - Blogs
+  /api/demote/{id}:
+    put:
+      consumes:
+      - application/json
+      description: Demote a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Demote a user by ID
+      tags:
+      - Users
+  /api/forget-password/:
+    get:
+      consumes:
+      - application/json
+      description: Validate the forget password token and reset the password
+      parameters:
+      - description: User ID
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: Token
+        in: query
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: Accepted
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Validate forget password token
+      tags:
+      - Password Reset
+  /api/forget-password/{id}:
+    post:
+      consumes:
+      - application/json
+      description: Send a forget password email to the user
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Email data
+        in: body
+        name: email
+        required: true
+        schema:
+          $ref: '#/definitions/domain.VerifyEmail'
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: 'email sent to: {email}'
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Send forget password email
+      tags:
+      - Password Reset
+  /api/google:
+    get:
+      description: Redirect to Google login URL
+      responses:
+        "307":
+          description: Redirect to Google login URL
+          schema:
+            type: string
+      summary: Google login
+      tags:
+      - Auth
+  /api/login:
+    post:
+      consumes:
+      - application/json
+      description: Log in a user
+      parameters:
+      - description: User login data
+        in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/domain.LogINUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Log in a user
+      tags:
+      - Auth
+  /api/logout:
+    post:
+      description: Log out a user
+      responses:
+        "200":
+          description: Logged out successfully
+          schema:
+            type: string
+      summary: Log out a user
+      tags:
+      - Auth
+  /api/my-blog:
+    get:
+      consumes:
+      - application/json
+      description: Get all blogs of the logged-in user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Blog'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get all blogs of the logged-in user
+      tags:
+      - Blogs
+  /api/oauth2/callback/google:
+    get:
+      description: Handle Google login callback
+      parameters:
+      - description: State
+        in: query
+        name: state
+        required: true
+        type: string
+      - description: Code
+        in: query
+        name: code
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Google login callback
+      tags:
+      - Auth
+  /api/promote/{id}:
+    put:
+      consumes:
+      - application/json
+      description: Promote a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Promote a user by ID
+      tags:
+      - Users
+  /api/refresh:
+    post:
+      description: Refresh access token using refresh token
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Refresh access token
+      tags:
+      - Auth
+  /api/search-blog/:
+    get:
+      consumes:
+      - application/json
+      description: Filter blog posts based on query parameters
+      parameters:
+      - description: Title
+        in: query
+        name: title
+        type: string
+      - description: Author
+        in: query
+        name: author
+        type: string
+      - collectionFormat: csv
+        description: Tags
+        in: query
+        items:
+          type: string
+        name: tags
+        type: array
+      - description: Start Date
+        in: query
+        name: start_date
+        type: string
+      - description: End Date
+        in: query
+        name: end_date
+        type: string
+      - description: Popularity
+        in: query
+        name: popularity
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Blog'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Filter blog posts
+      tags:
+      - Blogs
+  /api/signup:
+    post:
+      consumes:
+      - application/json
+      description: Register a new user
+      parameters:
+      - description: User registration data
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/domain.RegisterUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/practice_userservice_domain.ResponseUser'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Register a new user
+      tags:
+      - Auth
+  /api/user/:
+    get:
+      consumes:
+      - application/json
+      description: Get all users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get all users
+      tags:
+      - Users
+  /api/user/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: accepted!
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Delete a user by ID
+      tags:
+      - Users
+    get:
+      consumes:
+      - application/json
+      description: Get a single user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get a single user by ID
+      tags:
+      - Users
+    put:
+      consumes:
+      - application/json
+      description: Update a user by ID
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: User
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/domain.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Update a user by ID
+      tags:
+      - Users
+  /api/users/filter:
+    get:
+      consumes:
+      - application/json
+      description: Filter users based on query parameters
+      parameters:
+      - description: Filter
+        in: query
+        name: filter
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.User'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Filter users
+      tags:
+      - Users
+  /api/verify-email/{id}:
+    post:
+      consumes:
+      - application/json
+      description: Send a verification email to the user
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Email data
+        in: body
+        name: email
+        required: true
+        schema:
+          $ref: '#/definitions/domain.VerifyEmail'
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: 'email sent to: {email}'
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Send a verification email
+      tags:
+      - Email Verification
+  /api/verify-email/{token}:
+    get:
+      consumes:
+      - application/json
+      description: Verify the user's email using the provided token
+      parameters:
+      - description: Verification Token
+        in: path
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "202":
+          description: Verified
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Verify email
+      tags:
+      - Email Verification
+  /getbook/{userID}:
+    get:
+      consumes:
+      - application/json
+      description: Get all bookmarks for a user
+      parameters:
+      - description: User ID
+        in: path
+        name: userID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Bookmark'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Get user bookmarks
+      tags:
+      - Bookmarks
+  /remove/{userID}/{blogID}:
+    delete:
+      consumes:
+      - application/json
+      description: Remove a bookmark for a user
+      parameters:
+      - description: User ID
+        in: path
+        name: userID
+        required: true
+        type: string
+      - description: Blog ID
+        in: path
+        name: blogID
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Bookmark removed successfully
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/httputil.HTTPError'
+      summary: Remove a bookmark
+      tags:
+      - Bookmarks
+swagger: "2.0"

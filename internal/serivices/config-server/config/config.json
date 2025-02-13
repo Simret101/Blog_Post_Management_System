@@ -1,0 +1,13 @@
+{
+    "app_name": "ConfigServer",
+    "version": "1.0.0",
+    "port": 8080,
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "username": "admin",
+      "password": "password",
+      "dbname": "config_db"
+    }
+  }
+  
