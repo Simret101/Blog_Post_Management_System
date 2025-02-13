@@ -73,15 +73,70 @@ userservice/
 
 - **Blog Management**: Create, read, update, and delete blog posts.  
 - **User Management**: Handle user registration, profile updates, and role-based access control.  
-- **Authentication**: OAuth-based authentication with token management.  
+- **Authentication**: OAuth-based authentication with token management.
 
----
+## Services and APIs included:
 
-## Technology Stack  
+| Service        | Port | Purpose                                                                                   | Key Features                                                                                   | Database Entities                         | APIs                                                                                           |
+|---------------------|----------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Blog Service    | 8081     | Manages blog-related features, including posts, comments, tags, and categories.              | - CRUD operations for blog posts.<br>- Post categorization.<br>- Advanced search and filtering.    | Posts, Comments, Tags, Categories    | - POST /blogs: Create a blog.<br>- GET /blogs/id: Retrieve a blog.<br>- PUT /blogs/id: Update a blog.<br>- DELETE /blogs/id: Delete a blog. |
+| User Service    | 8082     | Manages user-related operations, such as login, registration, profile updates, and roles.    | - CRUD operations for users.<br>- Role-based access control.<br>- Account recovery and password reset. | Users, Roles, Profiles                 | - POST /users: Create user.<br>- GET /users/id: Retrieve user.<br>- PUT /users/id: Update user.<br>- DELETE /users/id: Delete user. |
+| Auth Service    | 8083     | Handles authentication and authorization, including token management and validation.         | - JWT-based token management.<br>- OAuth2 integration.<br>- Role-based access control.             | Tokens, Permissions                      | - POST /auth/login: Log in.<br>- POST /auth/logout: Log out.<br>- POST /auth/token: Refresh token. |
 
-- **Programming Language**: Go  
-- **Framework**: Gin  
-- **Authentication**: OAuth  
+## Technology Stack
+
+| Service          | Technology | Architecture       |   |
+| ---------------- | ---------- | ------------------ | - |
+| **Blog Service** | Go, Gin    | Clean Architecture |   |
+| **User Service** | Go, Gin    | Clean Architecture |   |
+| **Auth Service** | Go, Gin    | Clean Architecture |   |
+
+## Scalability and Fault Tolerance
+
+- **Horizontal Scaling**: Each service can be scaled independently.
+- **Database Isolation**: Each service uses a dedicated database to ensure autonomy.
+- **Resilience**: Services are loosely coupled to prevent cascading failures.
+
+## Security
+
+- **Authentication**: User authentication via secure tokens (e.g., JWT).
+- **Data Encryption**: All sensitive data is encrypted in transit and at rest.
+- **API Gateway**: Centralized API gateway for secure communication and routing.
+
+## Installation and Deployment
+
+### Prerequisites
+
+- Docker (recommended for containerized deployment).
+- Go and Mongodb installed locally (if not using Docker).
+
+### Steps
+
+1. Clone the repositories for all services.
+
+   ```sh
+   git clone <repository_url>
+   ```
+
+2. Set up `.env` files for each service with appropriate configurations.
+
+3. Run services:
+
+   **Using Docker Compose:**
+
+   ```sh
+   docker-compose up --build
+   ```
+
+   **Or manually start each service:**
+
+   ```sh
+   go mod init
+   ```
+
+4. Access APIs via the centralized API Gateway or directly at their respective endpoints.
+
+ 
 
 ---
 
@@ -138,10 +193,4 @@ Detailed API documentation can be found [here](https://www.postman.com/blogposts
 ---
 
 
-Table with the APIs included:
 
-| Service        | Port | Purpose                                                                                   | Key Features                                                                                   | Database Entities                         | APIs                                                                                           |
-|---------------------|----------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Blog Service    | 8081     | Manages blog-related features, including posts, comments, tags, and categories.              | - CRUD operations for blog posts.<br>- Post categorization.<br>- Advanced search and filtering.    | Posts, Comments, Tags, Categories    | - POST /blogs: Create a blog.<br>- GET /blogs/id: Retrieve a blog.<br>- PUT /blogs/id: Update a blog.<br>- DELETE /blogs/id: Delete a blog. |
-| User Service    | 8082     | Manages user-related operations, such as login, registration, profile updates, and roles.    | - CRUD operations for users.<br>- Role-based access control.<br>- Account recovery and password reset. | Users, Roles, Profiles                 | - POST /users: Create user.<br>- GET /users/id: Retrieve user.<br>- PUT /users/id: Update user.<br>- DELETE /users/id: Delete user. |
-| Auth Service    | 8083     | Handles authentication and authorization, including token management and validation.         | - JWT-based token management.<br>- OAuth2 integration.<br>- Role-based access control.             | Tokens, Permissions                      | - POST /auth/login: Log in.<br>- POST /auth/logout: Log out.<br>- POST /auth/token: Refresh token. |
